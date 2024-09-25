@@ -34,7 +34,7 @@ Use the provided `checkRequirements.sh` script to verify if all required tools a
 
    ```bash
    git clone https://github.com/guerriers/1CommandTools.git
-   cd tools
+   cd 1CommandTools
    ```
 
 2. Edit the `target.txt` file to set up your targets:
