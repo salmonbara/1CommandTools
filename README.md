@@ -1,4 +1,4 @@
-# 1CommandTools || Automated Web Application and IP Target Pentesting Tools
+# 1CommandTools || Automated Pentesting Tools
 
 This repository contains a set of bash scripts that automate reconnaissance, directory listing, and vulnerability scanning for web applications and IP targets. The tools help penetration testers to streamline their discovery process and collect information about the target.
 
