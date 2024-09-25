@@ -122,3 +122,7 @@ To verify or install missing tools, run the `checkRequirements.sh` script:
 ```
 
 This script checks for the required tools and how to install the missing tools.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
