@@ -1,6 +1,6 @@
 # 1CommandTools || Automated Pentesting Tools
 
-This repository contains a set of bash scripts that automate reconnaissance, directory listing, and vulnerability scanning for web applications and IP targets. The tools help penetration testers to streamline their discovery process and collect information about the target.
+This repository contains a set of bash scripts that automate reconnaissance, directory listing, and bruteforce scanning for web applications and IP targets. The tools help penetration testers to streamline their discovery process and collect information about the target.
 
 ## Table of Contents
 
@@ -68,7 +68,7 @@ Each mode performs a specific set of tasks depending on the nature of the target
 
 ### Examples
 
-1. **Run All Tools (Recon, Web Testing, and Vulnerability Scans)**:
+1. **Run All Tools (Recon, Directory Listing, and Bruteforce Scanning)**:
    ```
    ./1CommandTools.sh 0
    ```
@@ -99,19 +99,19 @@ The script generates the following summary files based on the mode used:
   - Basic DNS information (using Dig)
   - Whois information
 
-- **`*_summary_dirlist.txt`** — Contains results from Nikto, Gobuster, Wpscan, including:
+- **`*_summary_dirlist.txt`** — Contains results from Nikto and Gobuster, including:
 
   - Directories and files found
   - Vulnerabilities identified by Nikto (e.g., CVEs, potential misconfigurations)
 
-- **`*_summary_vuln_scan.txt`** — Contains results from vulnerability scanning tools such as SQLmap, including:
+- **`*_summary_bruteforce.txt`** — Contains results from bruteforce scanning tools such as Wpscan (placeholder), including:
 
-  - SQL injection points
-  - Other high-risk vulnerabilities found
+  - Detected weak credentials
+  - Notes from bruteforce attempts
 
-- **`*_summary_all.txt`** — A combined summary of all scans (Recon, Directory Listing, and Vulnerability Scanning). This file consolidates all the results for easy reference.
+- **`*_summary_all.txt`** — A combined summary of all scans (Recon, Directory Listing, and Bruteforce Scanning). This file is generated when running mode `0` and consolidates all the results for easy reference.
 
-Each summary file is generated based on the target IP or URL and mode selected. The filenames are formatted like this:
+Each summary file is generated based on the target IP or URL and mode selected. Recon summaries use the target IP as a prefix, while Directory Listing and Bruteforce summaries use the sanitized target URL. The combined `_summary_all.txt` concatenates the individual summaries.
 
 ## Tool Installation
 
