@@ -41,7 +41,7 @@ function run_recon {
     echo "Running Nmap..." >> "$summary_file"
     nmap_output=$(nmap -A -Pn $RHOST | grep -E "^[0-9]+/tcp.*open")
     echo "Open Ports and Services (Nmap):" >> "$summary_file"
-    echo "$nmap_output" | awk '{print $1, $3, $4}' >> "$summary_file"
+    echo "$nmap_output" | awk '{printf "%s %s %s", $1, $2, $3; for (i=4; i<=NF; i++) printf " %s", $i; print ""}' >> "$summary_file"
     echo "======================" >> "$summary_file"
 
     # Whois
