@@ -96,6 +96,12 @@ function run_all {
     run_recon
     run_dir_list
     run_bruteforce_scan
+
+    combined_summary="${output_prefix}_summary_all.txt"
+    cat "${output_prefix}_summary_recon.txt" \
+        "${TARGET_URL_SANITIZED}_summary_dirlist.txt" \
+        "${TARGET_URL_SANITIZED}_summary_bruteforce.txt" \
+        > "$combined_summary"
 }
 
 # Main function
