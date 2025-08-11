@@ -59,10 +59,10 @@ Use the provided `checkRequirements.sh` script to verify if all required tools a
 
 The main script `1CommandTools.sh` automates various pentesting tools based on the mode you select. The following modes are available:
 
-- `0`: Run **all tools** (Reconnaissance, Directory Listing, and Bruteforce Scanning)
+- `0`: Run **all tools** (Reconnaissance, Directory Listing, and Brute-force Scanning)
 - `1`: Run **Reconnaissance** tools (Nmap, Whois, Dig)
 - `2`: Run **Directory Listing** tools (Nikto, Gobuster, Wpscan)
-- `3`: Run **Bruteforce Scanning** tools (e.g., placeholder for future bruteforce tools)
+- `3`: Run **Brute-force Scanning** tools (e.g., placeholder for future brute-force tools)
 
 Each mode performs a specific set of tasks depending on the nature of the target.
 
@@ -84,7 +84,7 @@ Each mode performs a specific set of tasks depending on the nature of the target
    ./1CommandTools.sh 2
    ```
 
-4. Run Bruteforce Scanning Only (Placeholder):
+4. Run Brute-force Scanning Only (Placeholder):
    ```
    ./1CommandTools.sh 3
    ```

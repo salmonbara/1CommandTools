@@ -6,7 +6,7 @@ source target.txt
 output_prefix=$(echo "$RHOST" | sed 's/\./_/g')  # Replace dots with underscores for filenames
 TARGET_URL_SANITIZED=$(echo "$TARGET_URL" | sed 's/[:\/\.]/_/g')  # Sanitize TARGET_URL for filenames
 
-mode=$1  # Mode: 0 = all, 1 = recon, 2 = directory listing, 3 = bruteforce scan
+mode=$1  # Mode: 0 = all, 1 = recon, 2 = directory listing, 3 = brute-force scan
 
 # Display Help/Usage information
 function display_help {
@@ -16,10 +16,10 @@ function display_help {
     echo ""
     echo "Arguments:"
     echo "  mode             The mode to run the script. Possible values are:"
-    echo "                   0  - Run all tests (recon, directory listing, bruteforce scanning)."
+    echo "                   0  - Run all tests (recon, directory listing, brute-force scanning)."
     echo "                   1  - Run reconnaissance tools like nmap, whois, dig, etc."
     echo "                   2  - Run directory listing tools like nikto, gobuster, etc."
-    echo "                   3  - Run bruteforce scanning tools."
+    echo "                   3  - Run brute-force scanning tools."
     echo ""
     echo "Examples:"
     echo "  $0 0"
@@ -80,14 +80,14 @@ function run_dir_list {
     echo "======================" >> "$summary_file"
 }
 
-# Bruteforce Scan (future option for brute force tools)
+# Brute-force Scan (future option for brute-force tools)
 function run_bruteforce_scan {
     summary_file="${TARGET_URL_SANITIZED}_summary_bruteforce.txt"
-    echo "Starting Bruteforce Scan on $TARGET_URL" > "$summary_file"
+    echo "Starting Brute-force Scan on $TARGET_URL" > "$summary_file"
     echo "======================" >> "$summary_file"
 
     # Placeholder for tools like wpscan, etc.
-    echo "Placeholder for bruteforce scan tools like wpscan." >> "$summary_file"
+    echo "Placeholder for brute-force scan tools like wpscan." >> "$summary_file"
     echo "======================" >> "$summary_file"
 }
 
